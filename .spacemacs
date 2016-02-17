@@ -101,13 +101,6 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(sanityinc-tomorrow-night
-                         material
-                         tsdh-dark
-                         misterioso
-                         heroku
-                         firebelly
-                         alect-dark
-                         alect-dark-alt
                          sanityinc-tomorrow-eighties
                          wilson
                          twilight-anti-bright
@@ -121,7 +114,15 @@ values."
                          darktooth
                          bubbleberry
                          birds-of-paradise-plus
-                         flatui)
+                         flatui
+                         material
+                         tsdh-dark
+                         misterioso
+                         heroku
+                         firebelly
+                         alect-dark
+                         alect-dark-alt
+                         )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
