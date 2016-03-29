@@ -37,6 +37,7 @@ values."
             shell-default-height 30
             shell-default-position 'bottom)
      themes-megapack
+     typescript
      ;; spell-checking
      ;; syntax-checking
      version-control
@@ -260,6 +261,21 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  (setq-default
+   sp-highlight-pair-overlay nil
+   sp-highlight-wrap-overlay nil
+   sp-highlight-wrap-tag-overlay nil
+
+   ;; Flycheck
+   flycheck-check-syntax-automatically '(save mode-enabled)
+
+   ;; Avy
+   avy-all-windows 'all-frames
+
+   ;; Ranger
+   ranger-override-dired t
+
+   )
   )
 
 (defun dotspacemacs/user-config ()
@@ -267,6 +283,7 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq powerline-default-separator 'alternate)
+  (setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
